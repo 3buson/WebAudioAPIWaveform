@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Waveform drawer</title>
+</head>
+<body>
+  <input type="file" /><br />
+  <svg preserveAspectRatio="none" width="2000" height="100" style="width:900pxheight:50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="white" />
+      <stop offset="90%" stop-color="white" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="white" stop-opacity="0" />
+    </linearGradient>
+    <mask id="Mask">
+      <path fill="url(#Gradient)" />
+    </mask>
+    <rect id="progress" mask="url(#Mask)" x="0" y="0" width="0" height="100" fill="rgb(255, 154, 205)"  />
+    <rect id="remaining" mask="url(#Mask)" x="0" y="0" width="0" height="100" fill="rgb(236, 94, 165)"  />
+  </svg>
+  <script src="./main.js"></script>
+</body>
+</html>
